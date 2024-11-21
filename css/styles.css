@@ -192,13 +192,6 @@ body {
 
 /* ESTILOS LOGIN */
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-
 .body-login {
     display: flex;
     justify-content: center;
