@@ -1,7 +1,77 @@
 /* ESTILOS HEADER Y FOOTER */
 
 
+.header {
+    padding: 20px;
+    background-color: lightblue;
+}
 
+
+.header-arriba {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+
+.logo {
+    height: 80px;
+    margin-right: 20px; 
+}
+
+
+.header-form-container {
+    flex-grow: 1; 
+}
+
+.form{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.form input{
+    width: 90%;
+    height: 30px;
+    border: 1px solid transparent;
+   
+}
+
+.form button{
+    width: 10%;
+    height: 34px;
+    background-color: rgb(255 255 255);
+    border-left: 1px solid rgba(112, 112, 112, 0.962);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+
+}
+
+
+
+.navegacion {
+    display: flex;
+    justify-content: space-between; 
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+
+.nav-izq {
+    display: flex;
+}
+
+
+.nav-der {
+    display: flex;
+}
+
+
+.item {
+    margin-right: 20px; 
+}
 
 /* ESTILOS INDEX */
 
