@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
+    <header class="header">
+        <div class="header-arriba">
+            <img src="./img/logoProgra.jpg" alt="logo" class="logo">
+            <div class="header-form-container">
+                <form class="form" action="/buscar.html" method="get">
+                    <input type="text" name="query" placeholder="Buscar Productos">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
     
+        <div class="navegacion">
+            <div class="nav-izq">
+                <div class="item"><a href="./index.html">Home</a></div>
+                <div class="item"><a href="./categories.html">Categorias</a></div>
+            </div>
+            <div class="nav-der">
+                <div class="item"><a href="./login.html">Log in</a></div>
+                <div class="item"><a href="./register.html">Registro</a></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="foto-principal">
+            <div class="foto-receta">
+                <img class = "foto" src="" alt="foto-receta">
+            </div>
+            <div class="texto-receta">
+                <h2 class = "titulo"></h2>
+                <h3 class = "instrucciones"></h3>
+                <h3 class = "tiempoCoccion"></h3>
+                <h3 class = "categoria"></h3>
+    </main>
+<script src="./js/receta.js"></script>
 </body>
 </html>
