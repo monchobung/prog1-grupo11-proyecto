@@ -1,4 +1,5 @@
 let url = 'https://dummyjson.com/recipes';
+let skip = 0
 
 let cargarMas = document.querySelector('.cargar-mas');
 let recetasContainer = document.querySelector('.recetas');
@@ -6,6 +7,7 @@ let recetasContainer = document.querySelector('.recetas');
 let recetasCargadas = 0;
 
 function cargarRecetas() {
+    //let url = '' //skip
     fetch(url)
         .then(function (res) {
             return res.json();
@@ -27,14 +29,14 @@ function cargarRecetas() {
                     </div>
                 `;
             }
-
+            skip += 10
             recetasContainer.innerHTML += contenidoRecetas;
 
 
             recetasCargadas = limite;
 
 
-            if (recetasCargadas >= recetas.length) {
+            if (recetasCargadas >= recetas.length) { //recetas.length < 10
                 cargarMas.style.display = 'none';
             }
         })

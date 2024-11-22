@@ -33,6 +33,11 @@ if (ProductoId) {
             informacionReceta.textContent = data.instructions
             tiempoCoccion.textContent ='Tiempo Coccion: ' + data.cookTimeMinutes + ' minutos'
             categoria.textContent = 'Categoria: ' + data.tags
+
+            for (let index = 0; index < data.tags.length; index++) {
+                const tag = data.tags[index];
+                // "<a href='./result-categ.?'"
+            }
             
 
 
