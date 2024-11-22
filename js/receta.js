@@ -32,7 +32,8 @@ if (ProductoId) {
             titulo.textContent =data.name
             informacionReceta.textContent = data.instructions
             tiempoCoccion.textContent ='Tiempo Coccion: ' + data.cookTimeMinutes + ' minutos'
-            categoria.textContent = 'Categoria: ' + data.cuisine
+            categoria.textContent = 'Categoria: ' + data.tags
+            
 
 
 
