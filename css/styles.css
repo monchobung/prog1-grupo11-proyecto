@@ -257,3 +257,17 @@ body {
 
 
 /* ESTILOS SEARCH-RESULTS */
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .receta {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+  }
