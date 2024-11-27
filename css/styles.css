@@ -73,6 +73,18 @@
     margin-right: 20px; 
 }
 
+footer{
+    background-color: lightblue;
+}
+
+.texto-footer{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.logo-footer{
+    height: 80px;
+}
 /* ESTILOS INDEX */
 
 body {
