@@ -22,7 +22,8 @@ function cargarResultados() {
 
             let contenidoRecetas = '';
 
-            for (let receta of recetas) {
+            for (let i = 0; i < recetas.length; i++) {
+                let receta = recetas[i];
                 contenidoRecetas += `
                     <div class="receta">
                         <img src="${receta.image}" alt="${receta.name}" />
