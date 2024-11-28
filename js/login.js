@@ -1,22 +1,19 @@
 document.getElementById("loginForm").addEventListener("submit", function (event) {
-    // Obtener los inputs de email y contraseña
+
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
     let valid = true;
 
-    // Validar el campo de email
-    if (emailInput.value.trim() === "") {
-        alert("Por favor complete el campo email");
-        valid = false; // Marcar como no válido
+    if (emailInput.value == "") {
+        alert("Por favor ingrese su usuario");
+        valid = false;
     }
 
-    // Validar el campo de contraseña
-    if (passwordInput.value.trim() === "") {
-        alert("Por favor complete el campo contraseña");
-        valid = false; // Marcar como no válido
+    if (passwordInput.value == "") {
+        alert("Por favor ingrese su contraseña");
+        valid = false;
     }
 
-    // Evitar que el formulario se envíe si no es válido
     if (!valid) {
         event.preventDefault();
     }
