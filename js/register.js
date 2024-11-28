@@ -1,5 +1,5 @@
 document.getElementById("registro-form").addEventListener("submit", (event) => {
-    event.preventDefault();
+    
 
     const email = document.getElementById("email").value;
     const password=document.getElementById("password").value;
@@ -23,11 +23,13 @@ document.getElementById("registro-form").addEventListener("submit", (event) => {
         passwordError.textContent="";
     }
     if(!terms){
-        alert("acepte los terminos y condiciones rebeldee") 
+        alert("acepte los terminos y condiciones rebeldee");
+        valido=false
     }
 
-    if(valido){
-        
+    if(!valido){
+        event.preventDefault();
+
     }
 
 })
