@@ -23,7 +23,7 @@ document.getElementById("registro-form").addEventListener("submit", (event) => {
         passwordError.textContent="";
     }
     if(!terms){
-        alert("acepte los terminos y condiciones rebeldee");
+        alert("acepte los terminos y condiciones");
         valido=false
     }
 
