@@ -1,6 +1,6 @@
 let url = 'https://dummyjson.com/recipes/tags';
 
-let categoriasContenedor = document.querySelector('.categorias');
+let categoriasContenedor = document.querySelector('.categories');
 
 function cargarCategorias() {
     fetch(url)
