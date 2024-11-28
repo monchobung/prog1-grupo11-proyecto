@@ -1,11 +1,11 @@
 let url = new URLSearchParams(window.location.search);
-let query = url.get("query")
+let query = url.get("query");
 
-let busqueda = document.querySelector('.busqueda');
+let tituloBusqueda = document.querySelector('.titulo'); // Selecciona el <h2>
 let listaResultados = document.querySelector('.recetas');
 
-busqueda.textContent = query;
-
+// Actualiza directamente el contenido del <h2>
+tituloBusqueda.textContent = `Resultados de búsqueda para: ${query}`;
 
 function cargarResultados() {
     fetch(`https://dummyjson.com/recipes/search?q=${query}`)
@@ -13,10 +13,10 @@ function cargarResultados() {
             return res.json();
         })
         .then(function (data) {
-            let recetas = data.recipes; 
+            let recetas = data.recipes;
 
-            if(recetas.length === 0){
-                listaResultados.innerHTML = `<p>No se encontraron resultados para : ${query}</p>`;
+            if (recetas.length === 0) {
+                listaResultados.innerHTML = `<p>No se encontraron resultados para: ${query}</p>`;
                 return;
             }
 
@@ -39,6 +39,5 @@ function cargarResultados() {
             console.error('Error al cargar las recetas:', e);
         });
 }
-
 
 cargarResultados();
