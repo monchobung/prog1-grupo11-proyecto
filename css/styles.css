@@ -116,15 +116,15 @@ body {
 }
 
 .recetas {
-    display: flex; /* Usamos flexbox en lugar de grid */
-    flex-wrap: wrap; /* Esto permite que los elementos se acomoden en múltiples filas */
-    gap: 20px; /* Esto se reemplaza por márgenes entre los elementos */
-    justify-content: space-between; /* Esto asegura que haya espacio entre los elementos */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: space-between;
 }
 
 .receta {
     background-color: #fff;
-    width: 30%; /* Esto hace que cada "receta" ocupe el 30% del ancho del contenedor */
+    width: 30%; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -315,4 +315,29 @@ body {
         justify-content: center;
     }
 
+    .foto-principal {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; 
+    }
+
+    .foto-receta {
+        margin-right: 0; 
+        margin-bottom: 20px; 
+        width: 100%;
+    }
+
+    .texto-receta {
+        flex: 0 0 auto;
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .texto-receta h2 {
+        font-size: 24px;
+    }
+
+
+
 }
+
