@@ -305,6 +305,32 @@ body {
 @media (max-width: 768px) {
 
     /* HEADER */
+    .header-arriba {
+        flex-direction: column; 
+        align-items: center;
+        
+    }
+
+    .header-form-container {
+        width: 100%; 
+        justify-content: center;
+    }
+
+    .form input {
+        width: 70%; 
+        margin-top: 10px;
+    }
+
+    .form button {
+        width: 30%; 
+        margin-top: 10px;
+    }
+
+    .nav-izq, .nav-der {
+        display: flex;
+        flex-direction: column;
+    }
+
 
 
     /* INDEX */
@@ -314,7 +340,8 @@ body {
         flex-direction: column;
         justify-content: center;
     }
-
+    
+    /*detalle de receta*/
     .foto-principal {
         flex-direction: column;
         align-items: center;
