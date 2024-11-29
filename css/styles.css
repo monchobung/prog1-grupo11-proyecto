@@ -84,6 +84,9 @@ footer{
     font-weight: bold;
 }
 
+.texto-footer p{
+    padding: 20px;
+}
 .logo-footer{
     height: 80px;
 }
