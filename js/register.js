@@ -1,4 +1,4 @@
-document.getElementById("registro-form").addEventListener("submit", (event) => {
+document.getElementById("registro-form").addEventListener("submit", function(event) {
     
 
     const email = document.getElementById("email").value;
