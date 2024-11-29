@@ -13,7 +13,7 @@ function cargarRecetas() {
             return res.json();
         })
         .then(function (data) {
-            let recetas = data.recipes;
+            let recetas = data.recipes; 
             let contenido = '';
 
       
