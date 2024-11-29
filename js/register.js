@@ -3,6 +3,7 @@ let campoUsuario = document.querySelector("#email")
 let campoContra = document.querySelector("#password")
 let textoUsuario = document.querySelector("#email-error")
 let textoContra = document.querySelector("#password-error")
+let textoTerminos = document.querySelector("#terminos-error")
 let campoTerminos = document.querySelector("#terms")
 
 
@@ -22,7 +23,7 @@ campoRegistro.addEventListener('submit', function(event) {
 
     if ( campoContra.value == ""){
 
-        textoContra.innerHTML = "Completar campo de usuario."
+        textoContra.innerHTML = "Completar campo de contraseña."
         valido = false 
 
     } else{
@@ -30,7 +31,7 @@ campoRegistro.addEventListener('submit', function(event) {
     }
 
     if ( campoTerminos.checked == false){
-        alert("Checkea los terminos y condiciones")
+        textoTerminos.innerHTML = "Completar campo de terminos y condiciones."
         valido = false
     }
 
