@@ -1,13 +1,14 @@
 let url = new URLSearchParams(window.location.search);
 let query = url.get("query");
 
-let tituloBusqueda = document.querySelector('.titulo'); // Selecciona el <h2>
+let tituloBusqueda = document.querySelector('.titulo');
 let listaResultados = document.querySelector('.recetas');
 
-// Actualiza directamente el contenido del <h2>
-tituloBusqueda.innerHTML = `Resultados de búsqueda para: ${query}`;
-
-function cargarResultados() {
+if(query.length < 3){
+    tituloBusqueda.innerHTML = `Ingresa mas de 3 digitos`
+}else{
+    tituloBusqueda.innerHTML = `Resultados de búsqueda para: ${query}`;
+    function cargarResultados() {
     fetch(`https://dummyjson.com/recipes/search?q=${query}`)
         .then(function (res) {
             return res.json();
@@ -19,6 +20,7 @@ function cargarResultados() {
                 listaResultados.innerHTML = `<p>No se encontraron resultados para: ${query}</p>`;
                 return;
             }
+            
 
             let contenidoRecetas = '';
 
@@ -41,3 +43,8 @@ function cargarResultados() {
 }
 
 cargarResultados();
+}
+
+
+
+
