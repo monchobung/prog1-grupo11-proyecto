@@ -18,7 +18,7 @@ function cargarRecetas() {
             let contenidoRecetas = '';
 
             let limite = recetasCargadas + 10;
-            for (let i = recetasCargadas; i < limite && i < recetas.length; i++) {
+            for (let i = recetasCargadas; i < limite ; i++) {
                 let receta = recetas[i];
                 contenidoRecetas += `
                     <div class="receta">
