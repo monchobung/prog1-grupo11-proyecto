@@ -7,11 +7,11 @@ function cargarCategorias() {
         .then(function (res) {
             return res.json();
         })
-        .then(function (categorias) {
+        .then(function (data) {
             let contenido = '';
 
-            for (let i = 0; i < categorias.length; i++) {
-                let categoria = categorias[i];
+            for (let i = 0; i < data.length; i++) {
+                let categoria = data[i];
                 
                 contenido += '<li><a href="./category.html?tag=' + categoria + '">' + categoria + '</a></li>';
             }
