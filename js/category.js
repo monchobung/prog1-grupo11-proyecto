@@ -21,8 +21,9 @@ function cargarRecetas() {
                 let receta = recetas[i];
                 contenido += `<div class="receta">
                         <h2>${receta.name}</h2>
-                        <img src="${receta.image}"/>
-                       
+                        <img src="${receta.image}" alt="${receta.name}"/>
+                        <p>Dificultad: ${receta.difficulty}</p>
+                        <a href="receta.html?id=${receta.id}">Ver detalle</a>
                     </div>`;
             }
 
