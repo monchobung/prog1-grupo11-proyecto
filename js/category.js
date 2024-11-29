@@ -5,7 +5,7 @@ let titulo = document.querySelector('.titulo');
 let recetasTag = document.querySelector('.recetas');
 
 
-titulo.textContent = `Recetas de ${tag}`;
+titulo.innerHTML = `Recetas de ${tag}`;
 
 function cargarRecetas() {
     fetch(`https://dummyjson.com/recipes/tag/${tag}`)
@@ -15,8 +15,6 @@ function cargarRecetas() {
         .then(function (data) {
             let recetas = data.recipes; 
             let contenido = '';
-
-      
             for (let i = 0; i < recetas.length; i++) {
                 let receta = recetas[i];
                 contenido += `<div class="receta">
@@ -26,7 +24,6 @@ function cargarRecetas() {
                         <a href="receta.html?id=${receta.id}">Ver detalle</a>
                     </div>`;
             }
-
             recetasTag.innerHTML = contenido;
         })
         .catch(function (e) {
