@@ -1,21 +1,26 @@
-document.getElementById("loginForm").addEventListener("submit", function (event) {
+let logIn = document.querySelector("#loginForm")
+let mail = document.querySelector("#email")
+let contra = document.querySelector("#password")
 
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
-    let valid = true;
+logIn.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    if (emailInput.value == "") {
-        alert("Por favor ingrese su usuario");
-        valid = false;
+    valido = true
+
+    if (mail.value == ""){
+        alert("Por favor complete el campo email")
+        valido = false
     }
 
-    if (passwordInput.value == "") {
-        alert("Por favor ingrese su contraseña");
-        valid = false;
+    if (contra.value == ""){
+        alert("Por favor complete el campo contra")
+        valido = false
     }
 
-    if (!valid) {
-        event.preventDefault();
+    if ( valido == true){
+        this.submit()
     }
-});
+
+
+})
 
