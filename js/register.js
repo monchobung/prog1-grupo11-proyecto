@@ -1,35 +1,41 @@
-document.getElementById("registro-form").addEventListener("submit", function(event) {
-    
+let campoRegistro = document.querySelector(".registro-form");
+let campoUsuario = document.querySelector("#email")
+let campoContra = document.querySelector("#password")
+let textoUsuario = document.querySelector("#email-error")
+let textoContra = document.querySelector("#password-error")
+let campoTerminos = document.querySelector("#terms")
 
-    const email = document.getElementById("email").value;
-    const password=document.getElementById("password").value;
-    const terms=document.getElementById("terms").checked;
 
-    const emailError=document.getElementById("email-error");
-    const passwordError=document.getElementById("password-error");
 
-    let valido=true;
+campoRegistro.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    if(!email){
-        emailError.textContent="Por favor complete el campo Email!!";
-        valido=false;
-    }else{
-        emailError.textContent="";
-    }
-    if(!password){
-        passwordError.textContent="Por favor complete el campo Password!!";
-        valido=false;
-    }else{
-        passwordError.textContent="";
-    }
-    if(!terms){
-        alert("acepte los terminos y condiciones");
-        valido=false
+    valido = true
+
+    if ( campoUsuario.value == ""){
+
+        textoUsuario.innerHTML = "Completar campo de usuario."
+        valido = false
+    } else{
+        textoUsuario.innerHTML = ""
     }
 
-    if(!valido){
-        event.preventDefault();
+    if ( campoContra.value == ""){
 
+        textoContra.innerHTML = "Completar campo de usuario."
+        valido = false 
+
+    } else{
+        textoContra.innerHTML = ""  
+    }
+
+    if ( campoTerminos.checked == false){
+        alert("Checkea los terminos y condiciones")
+        valido = false
+    }
+
+    if ( valido == true){
+        this.submit()
     }
 
 })
