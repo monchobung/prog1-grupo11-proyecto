@@ -4,7 +4,7 @@ let tag = urlParams.get('tag');
 let titulo = document.querySelector('.titulo');
 let recetasTag = document.querySelector('.recetas');
 
-
+console.log(tag)
 titulo.innerHTML = `Recetas de ${tag}`;
 
 function cargarRecetas() {
